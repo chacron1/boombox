@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TrackInfo" format=3 uid="uid://cb8t4a0uh3sni"]
+
+[ext_resource type="Script" uid="uid://bpkau5uih2ldm" path="res://assets/core/conductor/track_info.gd" id="1_oi3wb"]
+
+[resource]
+script = ExtResource("1_oi3wb")
+metadata/_custom_type_script = "uid://bpkau5uih2ldm"

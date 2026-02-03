@@ -1,7 +1,9 @@
-@icon("res://assets/core/conductor/conductor.svg")
+@icon("res://assets/core/conductor/icons/conductor.svg")
 ## Accurately tracks the current beat of a song.
 class_name Conductor
 extends Node
+
+@export var track_info : TrackInfo
 
 ## If [code]true[/code], the song is paused. Setting [member is_paused] to
 ## [code]false[/code] resumes the song.
@@ -88,7 +90,11 @@ func _process(_delta: float) -> void:
 	_song_time_system = (Time.get_ticks_usec() / 1000000.0) - _song_time_begin
 	_song_time_system *= player.pitch_scale
 
-	# We don't do anything else here. Check _physics_process next.
+	# Update track_info
+	var _current_beat = get_current_beat()
+	var _beat : int = floor(_current_beat)
+	track_info.current_beat = _beat % 4 + 1
+	track_info.beat_progress = _current_beat - _beat
 
 
 func _physics_process(delta: float) -> void:
@@ -125,6 +131,9 @@ func play() -> void:
 	player.play()
 	_is_playing = true
 
+	track_info.reset()
+	track_info.is_playing = _is_playing
+
 	# Capture the start of the song using the system clock.
 	_song_time_begin = (
 			Time.get_ticks_usec() / 1000000.0
@@ -143,6 +152,9 @@ func play() -> void:
 func stop() -> void:
 	player.stop()
 	_is_playing = false
+
+	track_info.reset()
+	track_info.is_playing = _is_playing
 
 
 ## Returns the current beat of the song.

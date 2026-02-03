@@ -9,6 +9,7 @@
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/views/playground/scale_curve.tres" id="4_opt16"]
 [ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome_uv.tscn" id="5_42rxa"]
 [ext_resource type="Texture2D" uid="uid://bh664ya3dy8ci" path="res://assets/core/dancer/moves.png" id="8_opt16"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="8_x5x3f"]
 [ext_resource type="Script" uid="uid://b0wq8vw2ygl5m" path="res://assets/core/dancer/dancer.gd" id="9_kdo4f"]
 
 [node name="Node2D" type="CanvasLayer" unique_id=1847939071]
@@ -89,6 +90,7 @@ spot_angle = 89.99
 [node name="Conductor" type="Node" parent="." unique_id=1209828484 node_paths=PackedStringArray("player")]
 unique_name_in_owner = true
 script = ExtResource("2_wxc6y")
+track_info = ExtResource("8_x5x3f")
 player = NodePath("../AudioStreamPlayer")
 bpm = 110.0
 metadata/_custom_type_script = "uid://dosl0wcsx07cc"
