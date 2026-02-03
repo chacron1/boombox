@@ -1,21 +1,18 @@
 [gd_scene format=3 uid="uid://bn1bh6maxigdw"]
 
 [ext_resource type="Script" uid="uid://d388xjebkms1" path="res://assets/views/playground/playground.gd" id="1_daw1x"]
-[ext_resource type="Curve" uid="uid://crlv2rqts06yb" path="res://assets/views/playground/point_curve.tres" id="2_ck041"]
+[ext_resource type="Curve" uid="uid://crlv2rqts06yb" path="res://assets/utils/curves/accuracy_curve.tres" id="2_ck041"]
 [ext_resource type="Script" uid="uid://dosl0wcsx07cc" path="res://assets/core/conductor/conductor.gd" id="2_wxc6y"]
 [ext_resource type="AudioStream" uid="uid://cos8qodnhxtrx" path="res://assets/views/playground/playground.wav" id="3_ck041"]
-[ext_resource type="Curve" uid="uid://cjn57105xdh48" path="res://assets/views/playground/beat_curve.tres" id="3_rr4q7"]
 [ext_resource type="PackedScene" uid="uid://djmxaxbqmf6mq" path="res://assets/views/playground/boombox.tscn" id="4_idabl"]
-[ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/views/playground/scale_curve.tres" id="4_opt16"]
+[ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="4_opt16"]
 [ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome.tscn" id="5_42rxa"]
-[ext_resource type="Texture2D" uid="uid://bh664ya3dy8ci" path="res://assets/core/dancer/moves.png" id="8_opt16"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="8_x5x3f"]
-[ext_resource type="Script" uid="uid://b0wq8vw2ygl5m" path="res://assets/core/dancer/dancer.gd" id="9_kdo4f"]
+[ext_resource type="PackedScene" uid="uid://b52mbl5udftpd" path="res://assets/core/dancer/dancer.tscn" id="12_nrp73"]
 
 [node name="Node2D" type="CanvasLayer" unique_id=1847939071]
 script = ExtResource("1_daw1x")
 point_curve = ExtResource("2_ck041")
-beat_curve = ExtResource("3_rr4q7")
 scale_curve = ExtResource("4_opt16")
 
 [node name="BG" type="ColorRect" parent="." unique_id=368710928]
@@ -88,13 +85,5 @@ metadata/_custom_type_script = "uid://dosl0wcsx07cc"
 stream = ExtResource("3_ck041")
 pitch_scale = 1.2
 
-[node name="Dancer" type="Sprite2D" parent="." unique_id=2106942894]
-unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(240, 244.875)
-texture = ExtResource("8_opt16")
-offset = Vector2(0, -45.555)
-hframes = 6
-script = ExtResource("9_kdo4f")
-beat_curve = ExtResource("3_rr4q7")
-scale_curve = ExtResource("4_opt16")
+[node name="Dancer" parent="." unique_id=685967673 instance=ExtResource("12_nrp73")]
+position = Vector2(240, 244)

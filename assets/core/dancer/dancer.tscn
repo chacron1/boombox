@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b52mbl5udftpd"]
+
+[ext_resource type="Texture2D" uid="uid://bh664ya3dy8ci" path="res://assets/core/dancer/moves.png" id="1_baepb"]
+[ext_resource type="Script" uid="uid://b0wq8vw2ygl5m" path="res://assets/core/dancer/dancer.gd" id="1_nd3pi"]
+[ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="3_qd0ns"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="4_vgw5w"]
+
+[node name="Dancer" type="Sprite2D" unique_id=685967673]
+texture = ExtResource("1_baepb")
+offset = Vector2(0, -45.55)
+hframes = 6
+script = ExtResource("1_nd3pi")
+anim_curve = ExtResource("3_qd0ns")
+track_info = ExtResource("4_vgw5w")
+metadata/_custom_type_script = "uid://b0wq8vw2ygl5m"

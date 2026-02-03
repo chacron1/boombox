@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @export var point_curve : Curve 
-@export var beat_curve : Curve 
 @export var scale_curve : Curve 
 
 var conductor : Conductor
