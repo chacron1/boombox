@@ -1,11 +1,10 @@
 extends ColorRect
 
-var conductor : Conductor
+@export var track_info : TrackInfo
 @export var sample_curve : Curve
 @export var offset : float
+@export var wave_length : float = (0.23)
 
-var _beat : float = 0.0
-var _in_between : float = 0.0
 var _old_in_between : float = 0.0
 var color_cycle : float = 0.0
 
@@ -33,22 +32,18 @@ func _ready() -> void:
 	material.set_shader_parameter("w2_dist", w2_dist)
 	material.set_shader_parameter("w3_dist", w3_dist)
 	material.set_shader_parameter("w4_dist", w4_dist)
-	conductor = %Conductor
 
 func _process(_delta) -> void:
-	_beat = floor(conductor.get_current_beat())
-	_in_between = conductor.get_current_beat() - _beat
-	if !conductor.is_paused:
-		var move = sample_curve.sample(_in_between)
+	if track_info.is_playing:
+		var move = sample_curve.sample(track_info.beat_progress)
 		material.set_shader_parameter("move", move)
 		
-		var wave_length = (0.23)
 		var new_w1_dist = w1_dist + ((wave_length) * move)
 		var new_w2_dist = w2_dist + ((wave_length) * move)
 		var new_w3_dist = w3_dist + ((wave_length) * move)
 		var new_w4_dist = w4_dist + ((wave_length) * move)
 		
-		if _old_in_between > _in_between:
+		if _old_in_between > track_info.beat_progress:
 			# var tmp = w4_color
 			w4_color = w3_color
 			w3_color = w2_color
@@ -72,4 +67,4 @@ func _process(_delta) -> void:
 		material.set_shader_parameter("w3_dist", new_w3_dist)
 		material.set_shader_parameter("w4_dist", new_w4_dist)
 
-		_old_in_between = _in_between
+		_old_in_between = track_info.beat_progress

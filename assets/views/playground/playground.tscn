@@ -7,7 +7,7 @@
 [ext_resource type="Curve" uid="uid://cjn57105xdh48" path="res://assets/views/playground/beat_curve.tres" id="3_rr4q7"]
 [ext_resource type="PackedScene" uid="uid://djmxaxbqmf6mq" path="res://assets/views/playground/boombox.tscn" id="4_idabl"]
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/views/playground/scale_curve.tres" id="4_opt16"]
-[ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome_uv.tscn" id="5_42rxa"]
+[ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome.tscn" id="5_42rxa"]
 [ext_resource type="Texture2D" uid="uid://bh664ya3dy8ci" path="res://assets/core/dancer/moves.png" id="8_opt16"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="8_x5x3f"]
 [ext_resource type="Script" uid="uid://b0wq8vw2ygl5m" path="res://assets/core/dancer/dancer.gd" id="9_kdo4f"]
@@ -17,15 +17,6 @@ script = ExtResource("1_daw1x")
 point_curve = ExtResource("2_ck041")
 beat_curve = ExtResource("3_rr4q7")
 scale_curve = ExtResource("4_opt16")
-
-[node name="BGMetronome" type="ColorRect" parent="." unique_id=869398772]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="BG" type="ColorRect" parent="." unique_id=368710928]
 anchors_preset = 8
@@ -43,10 +34,8 @@ scale = Vector2(0.98, 0.98)
 pivot_offset = Vector2(160, 120)
 color = Color(0.42365062, 0.42365065, 0.42365062, 1)
 
-[node name="MetronomeUv" parent="." unique_id=908407237 instance=ExtResource("5_42rxa")]
-texture_filter = 1
-offset_top = 79.0
-offset = 2.15
+[node name="Metronome" parent="." unique_id=908407237 instance=ExtResource("5_42rxa")]
+offset_top = 68.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=902239183]
 anchors_preset = 8

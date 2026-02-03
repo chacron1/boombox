@@ -27,7 +27,7 @@ void fragment() {
 		alpha = 1.0 - distance(center.y, UV.y) * 12.0 / 1.0;
 	}
 	
-	if (test >= 0.8) {
+	if (test >= 0.98) {
 		if (distance(dist, w1_dist) <= 0.15) {
 			COLOR = vec4(w1_color.r, w1_color.g, w1_color.b, test);
 		} else if (distance(dist, w2_dist) <= 0.15) {

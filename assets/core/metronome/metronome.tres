@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://di1myhw2yua5n"]
+
+[ext_resource type="Shader" uid="uid://bivy8ey3y3cuk" path="res://assets/core/metronome/metronome.gdshader" id="1_q4csa"]
+
+[resource]
+shader = ExtResource("1_q4csa")
