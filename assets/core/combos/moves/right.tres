@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://0m4qdv6yr3e7"]
+
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="1_c1yjp"]
+
+[resource]
+script = ExtResource("1_c1yjp")
+name = &"Dibi"
+input_action = &"dancer_right"
+metadata/_custom_type_script = "uid://cupkt0mxce8gi"

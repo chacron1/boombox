@@ -8,7 +8,14 @@
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="4_opt16"]
 [ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome.tscn" id="5_42rxa"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="8_x5x3f"]
+[ext_resource type="Script" uid="uid://caxrwhsa021np" path="res://assets/views/playground/combo_check.gd" id="10_42rxa"]
+[ext_resource type="Resource" uid="uid://b31jufy5c23xa" path="res://assets/views/playground/test_combos.tres" id="11_hfmqu"]
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="12_mrwyf"]
 [ext_resource type="PackedScene" uid="uid://b52mbl5udftpd" path="res://assets/core/dancer/dancer.tscn" id="12_nrp73"]
+[ext_resource type="Resource" uid="uid://btgk32mds3wpi" path="res://assets/core/combos/moves/up.tres" id="13_8aili"]
+[ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="14_f85r5"]
+[ext_resource type="Resource" uid="uid://b4f5pruf8882v" path="res://assets/core/combos/moves/left.tres" id="15_th0q4"]
+[ext_resource type="Resource" uid="uid://vfc4ql7gbvbw" path="res://assets/core/combos/moves/down.tres" id="16_ewv8v"]
 
 [node name="Node2D" type="CanvasLayer" unique_id=1847939071]
 script = ExtResource("1_daw1x")
@@ -83,7 +90,13 @@ metadata/_custom_type_script = "uid://dosl0wcsx07cc"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=378087459]
 stream = ExtResource("3_ck041")
-pitch_scale = 1.2
 
 [node name="Dancer" parent="." unique_id=685967673 instance=ExtResource("12_nrp73")]
 position = Vector2(240, 244)
+
+[node name="Node" type="Node" parent="." unique_id=2143589939]
+script = ExtResource("10_42rxa")
+combo_engine = ExtResource("11_hfmqu")
+track_info = ExtResource("8_x5x3f")
+acc_curve = ExtResource("2_ck041")
+moves = Array[ExtResource("12_mrwyf")]([ExtResource("13_8aili"), ExtResource("14_f85r5"), ExtResource("15_th0q4"), ExtResource("16_ewv8v")])

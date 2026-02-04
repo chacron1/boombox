@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://btgk32mds3wpi"]
+
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="1_e8obh"]
+
+[resource]
+script = ExtResource("1_e8obh")
+name = &"Yah"
+input_action = &"dancer_up"
+metadata/_custom_type_script = "uid://cupkt0mxce8gi"
