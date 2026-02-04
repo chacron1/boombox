@@ -93,7 +93,7 @@ func _process(_delta: float) -> void:
 	# Update track_info
 	var _current_beat = get_current_beat()
 	var _beat : int = floor(_current_beat)
-	track_info.current_beat = _beat % 4 + 1
+	track_info.current_beat = _beat % 4
 	track_info.beat_progress = _current_beat - _beat
 
 
