@@ -3,10 +3,10 @@ shader_type canvas_item;
 uniform float move = 1.0;
 uniform float offset = 1.0;
 
-uniform vec4 w1_color;
-uniform vec4 w2_color;
-uniform vec4 w3_color;
-uniform vec4 w4_color;
+uniform vec4 w1_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform vec4 w2_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform vec4 w3_color = vec4(0.0, 0.0, 0.0, 1.0);
+uniform vec4 w4_color = vec4(0.0, 0.0, 0.0, 1.0);
 
 uniform float w1_dist;
 uniform float w2_dist;
@@ -29,13 +29,13 @@ void fragment() {
 	
 	if (test >= 0.98) {
 		if (distance(dist, w1_dist) <= 0.15) {
-			COLOR = vec4(w1_color.r, w1_color.g, w1_color.b, test);
+			COLOR = w1_color;
 		} else if (distance(dist, w2_dist) <= 0.15) {
-			COLOR = vec4(w2_color.r, w2_color.g, w2_color.b, test);
+			COLOR = w2_color;
 		} else if (distance(dist, w3_dist) <= 0.15) {
-			COLOR = vec4(w3_color.r, w3_color.g, w3_color.b, test);
+			COLOR = w3_color;
 		} else {
-			COLOR = vec4(w4_color.r, w4_color.g, w4_color.b, test);
+			COLOR = w4_color;
 		}
 		
 	} else {
