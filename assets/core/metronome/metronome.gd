@@ -43,7 +43,7 @@ func _process(_delta) -> void:
 		var new_w3_dist = w3_dist + ((wave_length) * move)
 		var new_w4_dist = w4_dist + ((wave_length) * move)
 
-		var current_wave = colors.get_wave(((track_info.measure) % 4))
+		var current_wave = colors.get_wave(track_info.measure)
 		
 		if _last_beat_progress > track_info.beat_progress:
 			w4_color = w3_color
