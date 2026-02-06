@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ComboEngine" format=3 uid="uid://b6iqvkwnfq442"]
+
+[ext_resource type="Script" uid="uid://dis6rfuop6vhp" path="res://assets/core/combos/choreo.gd" id="1_1r1qv"]
+[ext_resource type="Script" uid="uid://bodg3madtkbyc" path="res://assets/core/combos/combo_engine.gd" id="2_p6wx6"]
+
+[resource]
+script = ExtResource("2_p6wx6")
+metadata/_custom_type_script = "uid://bodg3madtkbyc"

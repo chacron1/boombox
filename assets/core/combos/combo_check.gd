@@ -1,3 +1,4 @@
+class_name ComboCheck
 extends Node
 
 # TODO:
@@ -22,8 +23,8 @@ var _missed_already : bool = false
 
 
 func _process(_delta: float) -> void:
-	var beat = roundi(track_info.current_beat) % 16
-	if beat > 4 and _last_caught_beat > 0:
+	var beat = (track_info.current_beat + roundi(track_info.beat_progress)) % 16
+	if beat > 3 and _last_caught_beat >= 0:
 		_missed_already = false
 		_last_caught_beat = -1
 		_current_cst = combo_engine.cst

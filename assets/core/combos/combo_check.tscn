@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqqgae2txdxdj"]
+
+[ext_resource type="Script" uid="uid://caxrwhsa021np" path="res://assets/core/combos/combo_check.gd" id="1_nrihc"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="2_0y2y2"]
+[ext_resource type="Curve" uid="uid://crlv2rqts06yb" path="res://assets/utils/curves/accuracy_curve.tres" id="3_khk4b"]
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="4_w7psd"]
+[ext_resource type="Resource" uid="uid://b4f5pruf8882v" path="res://assets/core/combos/moves/left.tres" id="5_gpwer"]
+[ext_resource type="Resource" uid="uid://btgk32mds3wpi" path="res://assets/core/combos/moves/up.tres" id="6_fmbq4"]
+[ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="7_5dc7i"]
+[ext_resource type="Resource" uid="uid://vfc4ql7gbvbw" path="res://assets/core/combos/moves/down.tres" id="8_xd626"]
+[ext_resource type="Resource" uid="uid://b6iqvkwnfq442" path="res://assets/core/combos/empty_combo_engine.tres" id="9_qlr1x"]
+
+[node name="ComboCheck" type="Node" unique_id=855988861]
+script = ExtResource("1_nrihc")
+track_info = ExtResource("2_0y2y2")
+acc_curve = ExtResource("3_khk4b")
+moves = Array[ExtResource("4_w7psd")]([ExtResource("5_gpwer"), ExtResource("6_fmbq4"), ExtResource("7_5dc7i"), ExtResource("8_xd626")])
+combo_engine = ExtResource("9_qlr1x")
+metadata/_custom_type_script = "uid://caxrwhsa021np"
