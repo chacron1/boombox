@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="NoFinishCond" format=3 uid="uid://dcr7httmu2wmk"]
+
+[ext_resource type="Script" uid="uid://crvekpgsoiayr" path="res://assets/core/scenario/finish_conditions/no_finish.gd" id="1_1h6eo"]
+
+[resource]
+script = ExtResource("1_1h6eo")
+metadata/_custom_type_script = "uid://crvekpgsoiayr"

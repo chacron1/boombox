@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Background" format=3 uid="uid://b210wrvh68tbp"]
+
+[ext_resource type="Material" uid="uid://1hbh0htqe2le" path="res://assets/backgrounds/basic/basic.tres" id="1_igi7y"]
+[ext_resource type="Script" uid="uid://dfv8h2ndigrt7" path="res://assets/backgrounds/background.gd" id="1_lmlp7"]
+[ext_resource type="Texture2D" uid="uid://erkxbuef6beh" path="res://icon.svg" id="3_kwm4r"]
+
+[resource]
+script = ExtResource("1_lmlp7")
+texture = ExtResource("3_kwm4r")
+material = ExtResource("1_igi7y")
+metadata/_custom_type_script = "uid://dfv8h2ndigrt7"

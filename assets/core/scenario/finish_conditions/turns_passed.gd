@@ -1,9 +1,10 @@
 class_name TurnsPassedCond
 extends FinishCond
 
-@export var turns_passed : int
+@export var after_turns : int
+@export var act_turns : Accessor
 
-# TODO - check passed turns (can assume that cond is being checked once a turn?)
 
 func cond() -> bool:
-	return false
+	var turns_passed = act_turns.value as int
+	return turns_passed >= after_turns

@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform float move = 1.0;
-uniform float offset = 1.0;
+uniform float offset = 0.1;
 
 uniform vec4 w1_color = vec4(0.0, 0.0, 0.0, 1.0);
 uniform vec4 w2_color = vec4(0.0, 0.0, 0.0, 1.0);

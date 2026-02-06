@@ -3,8 +3,8 @@
 [ext_resource type="Material" uid="uid://di1myhw2yua5n" path="res://assets/core/metronome/metronome.tres" id="1_5ficb"]
 [ext_resource type="Script" uid="uid://chxnvldmc1quq" path="res://assets/core/metronome/metronome.gd" id="2_5n7qt"]
 [ext_resource type="Curve" uid="uid://7m60wqdahfhu" path="res://assets/core/metronome/metronome_curve.tres" id="3_7bx8m"]
-[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="3_ehipe"]
-[ext_resource type="Resource" uid="uid://degkodfoljg1g" path="res://assets/core/metronome/palette/default_palette.tres" id="3_si14p"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="3_ehipe"]
+[ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="3_si14p"]
 
 [node name="Metronome" type="ColorRect" unique_id=908407237]
 texture_filter = 1
@@ -18,7 +18,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_5n7qt")
-colors = ExtResource("3_si14p")
+_current_act = ExtResource("3_si14p")
 track_info = ExtResource("3_ehipe")
 sample_curve = ExtResource("3_7bx8m")
 w1_dist = 0.05

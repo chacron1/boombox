@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ccf3hpy0d1sn2"]
+
+[ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome.tscn" id="1_pi0d8"]
+[ext_resource type="Script" uid="uid://0plxqx7egrjy" path="res://assets/views/battle/battle_view.gd" id="1_sm54i"]
+[ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="2_llhay"]
+[ext_resource type="PackedScene" uid="uid://b52mbl5udftpd" path="res://assets/core/dancer/dancer.tscn" id="2_sm54i"]
+[ext_resource type="Script" uid="uid://c8mnej0tb5xe3" path="res://assets/views/battle/background.gd" id="3_dsrnl"]
+[ext_resource type="PackedScene" uid="uid://bqrp3riftyx08" path="res://assets/core/conductor/conductor.tscn" id="3_llhay"]
+[ext_resource type="Resource" uid="uid://bsloty3tlss5m" path="res://assets/views/battle/shared/act_turns.tres" id="3_qkdf3"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="4_cju6s"]
+[ext_resource type="PackedScene" uid="uid://cqqgae2txdxdj" path="res://assets/core/combos/combo_check.tscn" id="6_3bar6"]
+
+[node name="BattleView" type="Node" unique_id=1991368807]
+script = ExtResource("1_sm54i")
+_current_act = ExtResource("2_llhay")
+_act_turns = ExtResource("3_qkdf3")
+_track_info = ExtResource("4_cju6s")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1960419885]
+
+[node name="ShaderBackground" type="TextureRect" parent="Background" unique_id=1888189056]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_dsrnl")
+_current_act = ExtResource("2_llhay")
+
+[node name="GameLayer" type="CanvasLayer" parent="." unique_id=1630036316]
+
+[node name="Metronome" parent="GameLayer" unique_id=908407237 instance=ExtResource("1_pi0d8")]
+
+[node name="Dancer" parent="GameLayer" unique_id=685967673 instance=ExtResource("2_sm54i")]
+position = Vector2(240, 244)
+
+[node name="Conductor" parent="." unique_id=435070806 instance=ExtResource("3_llhay")]
+unique_name_in_owner = true
+
+[node name="ComboCheck" parent="." unique_id=855988861 instance=ExtResource("6_3bar6")]

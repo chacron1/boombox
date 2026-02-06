@@ -1,6 +1,9 @@
 extends ColorRect
 
-@export var colors : WavePalette
+@export var _current_act : Accessor:
+	set(value):
+		value.value_changed.connect(change_palette)
+
 @export var track_info : TrackInfo
 @export var sample_curve : Curve
 @export var offset : float
@@ -9,6 +12,7 @@ extends ColorRect
 var _last_beat_progress : float = 0.0
 var _wave_idx = 3
 
+var colors : WavePalette
 var w1_color : Color = Color(0.0, 0.0, 0.0, 0.0)
 var w2_color : Color = Color(0.0, 0.0, 0.0, 0.0)
 var w3_color : Color = Color(0.0, 0.0, 0.0, 0.0)
@@ -62,3 +66,7 @@ func _process(_delta) -> void:
 		material.set_shader_parameter("w2_dist", new_w2_dist)
 		material.set_shader_parameter("w3_dist", new_w3_dist)
 		material.set_shader_parameter("w4_dist", new_w4_dist)
+
+func change_palette(value : Variant) -> void:
+	var act = value as Act
+	colors = act.metronome_palette

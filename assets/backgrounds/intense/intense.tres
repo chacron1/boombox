@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ce6x5arrkgaq3"]
+
+[ext_resource type="Shader" uid="uid://cuhmddv831wck" path="res://assets/backgrounds/intense/intense.gdshader" id="1_kqnte"]
+
+[resource]
+shader = ExtResource("1_kqnte")

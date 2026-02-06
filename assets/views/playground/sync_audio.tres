@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://ufqbp0lo57"]
+
+[ext_resource type="AudioStream" uid="uid://cos8qodnhxtrx" path="res://assets/views/playground/playground.wav" id="1_fkyyc"]
+
+[resource]
+stream_count = 1
+stream_0/stream = ExtResource("1_fkyyc")
+stream_0/volume = 0.0

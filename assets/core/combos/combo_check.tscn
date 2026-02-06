@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cqqgae2txdxdj"]
 
 [ext_resource type="Script" uid="uid://caxrwhsa021np" path="res://assets/core/combos/combo_check.gd" id="1_nrihc"]
-[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="2_0y2y2"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="2_0y2y2"]
 [ext_resource type="Curve" uid="uid://crlv2rqts06yb" path="res://assets/utils/curves/accuracy_curve.tres" id="3_khk4b"]
 [ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="4_w7psd"]
 [ext_resource type="Resource" uid="uid://b4f5pruf8882v" path="res://assets/core/combos/moves/left.tres" id="5_gpwer"]

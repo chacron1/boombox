@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://djmxaxbqmf6mq" path="res://assets/views/playground/boombox.tscn" id="4_idabl"]
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="4_opt16"]
 [ext_resource type="PackedScene" uid="uid://bmw31ta0ab4r6" path="res://assets/core/metronome/metronome.tscn" id="5_42rxa"]
-[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="8_x5x3f"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="8_x5x3f"]
 [ext_resource type="PackedScene" uid="uid://cqqgae2txdxdj" path="res://assets/core/combos/combo_check.tscn" id="10_x5x3f"]
 [ext_resource type="Resource" uid="uid://b31jufy5c23xa" path="res://assets/views/playground/test_combos.tres" id="11_hfmqu"]
 [ext_resource type="PackedScene" uid="uid://b52mbl5udftpd" path="res://assets/core/dancer/dancer.tscn" id="12_nrp73"]

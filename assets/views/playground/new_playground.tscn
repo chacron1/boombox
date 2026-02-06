@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cxdpxukrmsr10"]
+
+[ext_resource type="Script" uid="uid://dfw5pr37s538i" path="res://assets/views/playground/new_playground.gd" id="1_f4gve"]
+[ext_resource type="Resource" uid="uid://0ki4rmddk6ek" path="res://assets/views/playground/scenario/test_scenario.tres" id="2_71da0"]
+
+[node name="NewPlayground" type="Node" unique_id=203680162]
+script = ExtResource("1_f4gve")
+scenario = ExtResource("2_71da0")

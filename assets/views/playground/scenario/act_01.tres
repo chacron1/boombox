@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Act" format=3 uid="uid://dksp0j2pxakdn"]
+
+[ext_resource type="Resource" uid="uid://b6iqvkwnfq442" path="res://assets/core/combos/empty_combo_engine.tres" id="1_7ajay"]
+[ext_resource type="Script" uid="uid://cao4fueewa6uv" path="res://assets/core/scenario/act.gd" id="1_yfafh"]
+[ext_resource type="Resource" uid="uid://b210wrvh68tbp" path="res://assets/backgrounds/basic.tres" id="2_0hali"]
+[ext_resource type="Resource" uid="uid://dxqitsu74fo3e" path="res://assets/views/playground/scenario/conditions/turns_passed.tres" id="3_0hali"]
+[ext_resource type="Resource" uid="uid://bm4s323ki8gug" path="res://assets/views/playground/scenario/palettes/test_palette.tres" id="4_2swtn"]
+
+[resource]
+script = ExtResource("1_yfafh")
+condition = ExtResource("3_0hali")
+allowed_choreos = ExtResource("1_7ajay")
+background = ExtResource("2_0hali")
+metronome_palette = ExtResource("4_2swtn")
+metadata/_custom_type_script = "uid://cao4fueewa6uv"
