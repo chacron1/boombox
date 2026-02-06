@@ -6,4 +6,5 @@
 script = ExtResource("1_x7vb6")
 name = &"Bom"
 input_action = &"dancer_left"
+anim_index = 4
 metadata/_custom_type_script = "uid://cupkt0mxce8gi"

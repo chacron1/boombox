@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bgpkfdo2e2ba2"]
 
 [ext_resource type="Script" uid="uid://bllendkrwhfg5" path="res://assets/views/enemy/enemy_view.gd" id="1_c4fwc"]
-[ext_resource type="PackedScene" uid="uid://djmxaxbqmf6mq" path="res://assets/views/playground/boombox.tscn" id="2_7jbnk"]
 
 [node name="EnemyView" type="SubViewport" unique_id=515084632]
 transparent_bg = true
@@ -11,10 +10,6 @@ metadata/_custom_type_script = "uid://bllendkrwhfg5"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=646016358]
 transform = Transform3D(-3.46651e-08, -0.609163, 0.793045, -2.662736e-08, 0.793045, 0.609163, -1, 0, -4.3711385e-08, 6.8928995, 2.128993, 0)
-
-[node name="boombox" parent="." unique_id=820038764 instance=ExtResource("2_7jbnk")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
-visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=98663310]
 transform = Transform3D(-4.2893664e-08, -0.19252196, 0.98129267, -8.415402e-09, 0.98129267, 0.19252196, -1, 0, -4.371139e-08, 7.78744, 0, 0)

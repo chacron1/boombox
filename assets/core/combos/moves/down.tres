@@ -6,4 +6,5 @@
 script = ExtResource("1_mp5yt")
 name = &"Wub"
 input_action = &"dancer_down"
+anim_index = 2
 metadata/_custom_type_script = "uid://cupkt0mxce8gi"

@@ -4,3 +4,4 @@ extends Resource
 
 @export var name : StringName
 @export var input_action : StringName
+@export var anim_index : int

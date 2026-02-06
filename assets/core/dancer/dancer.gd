@@ -5,6 +5,9 @@ extends Sprite2D
 @export var anim_curve : Curve 
 @export var track_info : TrackInfo
 @export var anim_strength : float = 0.05
+@export var moves: Array[DanceMove]
+@export var audio_players : Dictionary[StringName, AudioStreamPlayer]
+@export var animation_player : AnimationPlayer
 
 func _process(_delta) -> void:
 	if track_info.is_playing:
@@ -19,11 +22,9 @@ func _process(_delta) -> void:
 		frame = 0
 
 func _input(event):
-	if event.is_action_pressed("dancer_left"):
-		frame = 3
-	if event.is_action_pressed("dancer_up"):
-		frame = 5
-	if event.is_action_pressed("dancer_right"):
-		frame = 4
-	if event.is_action_pressed("dancer_down"):
-		frame = 2
+	# TODO : Check if it's your 'TURN'
+	for m in moves:
+		if event.is_action_pressed(m.input_action):
+			frame = m.anim_index
+			audio_players[m.name].play()
+			animation_player.play(m.name)
