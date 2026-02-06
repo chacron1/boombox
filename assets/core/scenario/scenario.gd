@@ -5,7 +5,7 @@ extends Resource
 @export var ost : AudioStreamSynchronized
 @export var bpm : int
 @export var acts : Array[Act]
-# TODO : Enemy model resource
+@export var enemy : PackedScene
 
 var current_act : Act
 

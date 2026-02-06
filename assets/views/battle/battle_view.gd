@@ -7,6 +7,7 @@ extends Node
 @export var _track_info : TrackInfo
 
 @onready var conductor : Conductor = %Conductor
+@onready var enemy : EnemyView = %EnemyView
 
 var _scenario : Scenario
 var _act_idx : int = -1
@@ -16,7 +17,7 @@ func setup(scenario : Scenario) -> void:
 	_scenario = scenario
 
 func _ready() -> void:
-	# TODO : set enemy model
+	enemy.setup(_scenario.enemy)
 	conductor.player.stream = _scenario.ost
 	conductor.bpm = _scenario.bpm
 	_track_info.measure_finished.connect(on_cycle_complete)

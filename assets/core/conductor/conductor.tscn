@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqrp3riftyx08"]
 
 [ext_resource type="Script" uid="uid://dosl0wcsx07cc" path="res://assets/core/conductor/conductor.gd" id="1_tpc0k"]
-[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="2_iwgp2"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="2_iwgp2"]
 
 [node name="Conductor" type="Node" unique_id=435070806 node_paths=PackedStringArray("player")]
 script = ExtResource("1_tpc0k")

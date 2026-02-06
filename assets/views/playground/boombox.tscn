@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://djmxaxbqmf6mq"]
-
-[ext_resource type="PackedScene" uid="uid://0kaj4ih74wt8" path="res://assets/views/playground/boombox.glb" id="1_lre13"]
-
-[node name="boombox" unique_id=820038764 instance=ExtResource("1_lre13")]

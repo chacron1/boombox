@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://0kaj4ih74wt8"
-path="res://.godot/imported/boombox.glb-f975202d14a96ddacb72318d0d869ffb.scn"
+path="res://.godot/imported/boombox.glb-43575bfa6f55d449fd43980c76c25f9e.scn"
 
 [deps]
 
-source_file="res://assets/views/playground/boombox.glb"
-dest_files=["res://.godot/imported/boombox.glb-f975202d14a96ddacb72318d0d869ffb.scn"]
+source_file="res://assets/enemies/basic_box/boombox.glb"
+dest_files=["res://.godot/imported/boombox.glb-43575bfa6f55d449fd43980c76c25f9e.scn"]
 
 [params]
 

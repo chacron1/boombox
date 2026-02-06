@@ -7,8 +7,9 @@
 [ext_resource type="Script" uid="uid://c8mnej0tb5xe3" path="res://assets/views/battle/background.gd" id="3_dsrnl"]
 [ext_resource type="PackedScene" uid="uid://bqrp3riftyx08" path="res://assets/core/conductor/conductor.tscn" id="3_llhay"]
 [ext_resource type="Resource" uid="uid://bsloty3tlss5m" path="res://assets/views/battle/shared/act_turns.tres" id="3_qkdf3"]
-[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/views/battle/shared/track_info.tres" id="4_cju6s"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="4_cju6s"]
 [ext_resource type="PackedScene" uid="uid://cqqgae2txdxdj" path="res://assets/core/combos/combo_check.tscn" id="6_3bar6"]
+[ext_resource type="PackedScene" uid="uid://bgpkfdo2e2ba2" path="res://assets/views/enemy/enemy_view.tscn" id="7_cju6s"]
 
 [node name="BattleView" type="Node" unique_id=1991368807]
 script = ExtResource("1_sm54i")
@@ -32,6 +33,21 @@ _current_act = ExtResource("2_llhay")
 [node name="GameLayer" type="CanvasLayer" parent="." unique_id=1630036316]
 
 [node name="Metronome" parent="GameLayer" unique_id=908407237 instance=ExtResource("1_pi0d8")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="GameLayer" unique_id=1573744773]
+custom_minimum_size = Vector2(480, 270)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyView" parent="GameLayer/SubViewportContainer" unique_id=515084632 instance=ExtResource("7_cju6s")]
+unique_name_in_owner = true
+handle_input_locally = false
+render_target_update_mode = 4
 
 [node name="Dancer" parent="GameLayer" unique_id=685967673 instance=ExtResource("2_sm54i")]
 position = Vector2(240, 244)

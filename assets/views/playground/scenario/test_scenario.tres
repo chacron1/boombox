@@ -5,10 +5,12 @@
 [ext_resource type="Resource" uid="uid://dksp0j2pxakdn" path="res://assets/views/playground/scenario/act_01.tres" id="2_kyyxw"]
 [ext_resource type="AudioStream" uid="uid://ufqbp0lo57" path="res://assets/views/playground/sync_audio.tres" id="3_d1r70"]
 [ext_resource type="Resource" uid="uid://cf8ld4drj72cb" path="res://assets/views/playground/scenario/act_02.tres" id="3_m4hak"]
+[ext_resource type="PackedScene" uid="uid://bixoyaduyuj4c" path="res://assets/enemies/basic_box/basic_box.tscn" id="4_m4hak"]
 
 [resource]
 script = ExtResource("2_ddw4k")
 ost = ExtResource("3_d1r70")
 bpm = 110
 acts = Array[ExtResource("1_8qqp8")]([ExtResource("2_kyyxw"), ExtResource("3_m4hak")])
+enemy = ExtResource("4_m4hak")
 metadata/_custom_type_script = "uid://dpoc4e34v8lha"
