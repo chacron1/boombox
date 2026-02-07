@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://s6bomekh6yc3"]
+
+[ext_resource type="AudioStream" uid="uid://btlpnlu0i6883" path="res://resources/audio/song2/metronome.ogg" id="1_od0de"]
+[ext_resource type="AudioStream" uid="uid://c3a8vx12fensv" path="res://resources/audio/song2/kick.ogg" id="2_888dc"]
+[ext_resource type="AudioStream" uid="uid://bqrnya34watk" path="res://resources/audio/song2/bass.ogg" id="3_6s5ll"]
+[ext_resource type="AudioStream" uid="uid://bnnnjgpxgdpoq" path="res://resources/audio/song2/leaad.ogg" id="4_jry8g"]
+[ext_resource type="AudioStream" uid="uid://4qhd27qtpp4r" path="res://resources/audio/song2/atmos.ogg" id="5_gtmi3"]
+
+[resource]
+stream_count = 5
+stream_0/stream = ExtResource("1_od0de")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_888dc")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_6s5ll")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("4_jry8g")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("5_gtmi3")
+stream_4/volume = 0.0

@@ -1,0 +1,14 @@
+[gd_resource type="AudioStreamSynchronized" format=3 uid="uid://c116nm512kut1"]
+
+[ext_resource type="AudioStream" uid="uid://cc45lict3je8v" path="res://resources/audio/song1/metronome.ogg" id="1_cyrh8"]
+[ext_resource type="AudioStream" uid="uid://buhd52seajh77" path="res://resources/audio/song1/kick.ogg" id="2_13l62"]
+[ext_resource type="AudioStream" uid="uid://bg6614jj48xvx" path="res://resources/audio/song1/bass.ogg" id="3_d5xgb"]
+
+[resource]
+stream_count = 3
+stream_0/stream = ExtResource("1_cyrh8")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_13l62")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_d5xgb")
+stream_2/volume = 0.0

@@ -90,11 +90,6 @@ func _process(_delta: float) -> void:
 	_song_time_system = (Time.get_ticks_usec() / 1000000.0) - _song_time_begin
 	_song_time_system *= player.pitch_scale
 
-	# Update track_info
-	var _current_beat = get_current_beat()
-	var _beat : int = floor(_current_beat)
-	track_info.current_beat = _beat % 16
-	track_info.beat_progress = _current_beat - _beat
 
 
 func _physics_process(delta: float) -> void:
@@ -119,6 +114,13 @@ func _physics_process(delta: float) -> void:
 	# Uncomment this to show the difference between raw and filtered time.
 	#var song_time := _song_time_system + _filtered_audio_system_delta
 	#print("Error: %+.1f ms" % [abs(song_time - _song_time_audio) * 1000.0])
+	# Update track_info
+	var _current_beat = get_current_beat_raw()
+	if _current_beat < 0:
+		_current_beat = 0.0
+	var _beat : int = floor(_current_beat)
+	track_info.current_beat = _beat % 16
+	track_info.beat_progress = _current_beat - _beat
 
 
 func play() -> void:
