@@ -23,11 +23,12 @@ void fragment() {
 	float dist = (distance(UV, center));
 	float test = sin(dist * 25.0 - (move * 2.0 * PI) + offset);
 	float alpha = 1.0;
-	if (UV.y < center.y) {
-		alpha = 1.0 - distance(center.y, UV.y) * 12.0 / 1.0;
-	}
+//	if (UV.y < center.y) {
+//		alpha = 1.0 - distance(center.y, UV.y) * 12.0 / 1.0;
+//	}
+
 	
-	if (test >= 0.98) {
+	if (test >= 0.98 && UV.y > 0.2) {
 		if (distance(dist, w1_dist) <= 0.15) {
 			COLOR = w1_color;
 		} else if (distance(dist, w2_dist) <= 0.15) {
@@ -41,11 +42,5 @@ void fragment() {
 	} else {
 		COLOR = vec4(1.0, 1.0, 1.0, 0.0);
 	}
-
-	// COLOR = vec4(sin(dist * 30.0 + (move * 2.0 * PI)), 0.9, 0.9, 1.0);
 }
 
-//void light() {
-//	// Called for every pixel for every light affecting the CanvasItem.
-//	// Uncomment to replace the default light processing function with this one.
-//}

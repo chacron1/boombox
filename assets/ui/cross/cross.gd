@@ -3,7 +3,7 @@ extends Sprite2D
 
 @export var track_info : TrackInfo
 @export var anim_curve : Curve 
-@export var anim_strength : float = 0.05
+@export var anim_strength : float
 @export var sprites : Array[Sprite2D]
 @export var moves: Array[DanceMove]
 @export var animation_player : AnimationPlayer
