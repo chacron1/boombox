@@ -10,7 +10,7 @@ extends ColorRect
 @export var wave_length : float = (0.23)
 
 var _last_beat_progress : float = 0.0
-var _wave_idx = 3
+var _wave_idx = 0
 
 var colors : WavePalette
 var w1_color : Color = Color(0.0, 0.0, 0.0, 0.0)
@@ -47,7 +47,7 @@ func _process(_delta) -> void:
 		var new_w3_dist = w3_dist + ((wave_length) * move)
 		var new_w4_dist = w4_dist + ((wave_length) * move)
 
-		var current_wave = colors.get_wave(track_info.measure)
+		var current_wave = colors.get_wave(((track_info.current_beat + 3) % 16) / 4)
 		
 		if _last_beat_progress > track_info.beat_progress:
 			w4_color = w3_color
