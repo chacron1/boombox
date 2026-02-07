@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://brrqb50uy48ye"]
+
+[ext_resource type="FontFile" uid="uid://blnnu2ivlh46j" path="res://resources/fonts/bit_arcade_in.ttf" id="1_rxvq8"]
+
+[resource]
+font = ExtResource("1_rxvq8")
+font_size = 48
+outline_size = 4
+outline_color = Color(1, 0, 0.7833333, 1)

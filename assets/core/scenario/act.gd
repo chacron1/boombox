@@ -3,6 +3,7 @@ class_name Act
 extends Resource
 
 @export var is_tutorial : bool
+@export var warmup : bool
 @export var condition : FinishCond
 @export var allowed_choreos : ComboEngine
 @export var background : Background

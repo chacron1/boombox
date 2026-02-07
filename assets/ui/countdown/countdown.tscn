@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://c08084f6b8lym"]
+
+[ext_resource type="Script" uid="uid://ltmckl5kmdd2" path="res://assets/ui/countdown/countdown.gd" id="1_80ykg"]
+[ext_resource type="LabelSettings" uid="uid://brrqb50uy48ye" path="res://assets/ui/countdown/countdown_label.tres" id="1_jhhet"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="2_bccfe"]
+[ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="3_of8tn"]
+[ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="4_3glb7"]
+
+[sub_resource type="Animation" id="Animation_jhhet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qepq7"]
+resource_name = "pop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30.695)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:self_modulate:a")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.76666665, 0.93333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rt87v"]
+_data = {
+&"RESET": SubResource("Animation_jhhet"),
+&"pop": SubResource("Animation_qepq7")
+}
+
+[node name="Countdown" type="Control" unique_id=1480208571 node_paths=PackedStringArray("animation_player", "label")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80ykg")
+track_info = ExtResource("2_bccfe")
+current_act = ExtResource("3_of8tn")
+animation_player = NodePath("AnimationPlayer")
+wave_curve = ExtResource("4_3glb7")
+label = NodePath("Label")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1291542940]
+libraries/ = SubResource("AnimationLibrary_rt87v")
+
+[node name="Label" type="Label" parent="." unique_id=930310202]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3."
+label_settings = ExtResource("1_jhhet")
+horizontal_alignment = 1
+vertical_alignment = 1
