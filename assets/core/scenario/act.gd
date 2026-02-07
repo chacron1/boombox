@@ -10,6 +10,13 @@ extends Resource
 @export var metronome_palette : WavePalette
 
 
+@export_group("Track volume")
+@export_range(0.0, 1.0) var volume_metronome : float
+@export_range(0.0, 1.0) var volume_kick : float
+@export_range(0.0, 1.0) var volume_bass : float
+@export_range(0.0, 1.0) var volume_lead : float
+@export_range(0.0, 1.0) var volume_atmos : float
+
+
 # TODO : allowed_enemy_attacks : Array[EnemyAttack]
 # TODO : tutorial display message text (if tutorial scene)
-# TODO : which track should play :

@@ -14,4 +14,5 @@ condition = ExtResource("3_0hali")
 allowed_choreos = ExtResource("1_7ajay")
 background = ExtResource("2_0hali")
 metronome_palette = ExtResource("4_2swtn")
+volume_metronome = 1.0
 metadata/_custom_type_script = "uid://cao4fueewa6uv"

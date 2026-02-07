@@ -2,11 +2,24 @@
 
 [ext_resource type="Script" uid="uid://dosl0wcsx07cc" path="res://assets/core/conductor/conductor.gd" id="1_tpc0k"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="2_iwgp2"]
+[ext_resource type="Resource" uid="uid://c8nuekwelybs8" path="res://assets/core/conductor/shared/pitch.tres" id="3_mwdmk"]
+[ext_resource type="Resource" uid="uid://cb5gq2wy4uayy" path="res://assets/core/conductor/shared/volume_metronome.tres" id="4_3eucr"]
+[ext_resource type="Resource" uid="uid://c6j5k4lc7s0uu" path="res://assets/core/conductor/shared/volume_kick.tres" id="5_kmo2f"]
+[ext_resource type="Resource" uid="uid://yi8rbnuhwerh" path="res://assets/core/conductor/shared/volume_bass.tres" id="6_gcp6y"]
+[ext_resource type="Resource" uid="uid://bo53sh3frhlqk" path="res://assets/core/conductor/shared/volume_lead.tres" id="7_r3058"]
+[ext_resource type="Resource" uid="uid://dj8gkxdg6kb2" path="res://assets/core/conductor/shared/volume_atmos.tres" id="8_mhgbt"]
 
 [node name="Conductor" type="Node" unique_id=435070806 node_paths=PackedStringArray("player")]
 script = ExtResource("1_tpc0k")
 track_info = ExtResource("2_iwgp2")
+pitch = ExtResource("3_mwdmk")
+volume_metronome = ExtResource("4_3eucr")
+volume_kick = ExtResource("5_kmo2f")
+volume_bass = ExtResource("6_gcp6y")
+volume_lead = ExtResource("7_r3058")
+volume_atmos = ExtResource("8_mhgbt")
 player = NodePath("AudioStreamPlayer")
 metadata/_custom_type_script = "uid://dosl0wcsx07cc"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=829962865]
+pitch_scale = 1.2

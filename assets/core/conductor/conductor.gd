@@ -16,6 +16,27 @@ extends Node
 		if player:
 			player.stream_paused = value
 
+@export_group("Song parameter accessors")
+@export var pitch : Accessor:
+	set(value):
+		value.value_changed.connect(pitch_changed)
+@export_subgroup("Song volume accessors")
+@export var volume_metronome: Accessor:
+	set(value):
+		value.value_changed.connect(volume_metronome_changed)
+@export var volume_kick: Accessor:
+	set(value):
+		value.value_changed.connect(volume_kick_changed)
+@export var volume_bass: Accessor:
+	set(value):
+		value.value_changed.connect(volume_bass_changed)
+@export var volume_lead: Accessor:
+	set(value):
+		value.value_changed.connect(volume_lead_changed)
+@export var volume_atmos: Accessor:
+	set(value):
+		value.value_changed.connect(volume_atmos_changed)
+
 @export_group("Nodes")
 ## The song player.
 @export var player: AudioStreamPlayer
@@ -122,6 +143,12 @@ func _physics_process(delta: float) -> void:
 	track_info.current_beat = _beat % 16
 	track_info.beat_progress = _current_beat - _beat
 
+func _set_stream_volume(idx: int, db : float) -> void:
+	if player.stream != null:
+		var stream = player.stream as AudioStreamSynchronized
+		if stream.stream_count >= idx + 1:
+			stream.set_sync_stream_volume(idx, linear_to_db(db))
+
 
 func play() -> void:
 	var filter_args := {
@@ -173,3 +200,23 @@ func get_current_beat_raw() -> float:
 ## Returns the duration of one beat (in seconds).
 func get_beat_duration() -> float:
 	return 60 / bpm
+
+
+func pitch_changed(value : Variant) -> void:
+	player.pitch_scale = value as float
+
+
+func volume_metronome_changed(value : Variant) -> void:
+	_set_stream_volume(0, value as float)
+
+func volume_kick_changed(value : Variant) -> void:
+	_set_stream_volume(1, value as float)
+
+func volume_bass_changed(value : Variant) -> void:
+	_set_stream_volume(2, value as float)
+
+func volume_lead_changed(value : Variant) -> void:
+	_set_stream_volume(3, value as float)
+
+func volume_atmos_changed(value : Variant) -> void:
+	_set_stream_volume(4, value as float)

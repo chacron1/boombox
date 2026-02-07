@@ -8,10 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://bqrp3riftyx08" path="res://assets/core/conductor/conductor.tscn" id="3_llhay"]
 [ext_resource type="Resource" uid="uid://bsloty3tlss5m" path="res://assets/views/battle/shared/act_turns.tres" id="3_qkdf3"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="4_cju6s"]
+[ext_resource type="Resource" uid="uid://c8nuekwelybs8" path="res://assets/core/conductor/shared/pitch.tres" id="5_yakm4"]
 [ext_resource type="PackedScene" uid="uid://cqqgae2txdxdj" path="res://assets/core/combos/combo_check.tscn" id="6_3bar6"]
+[ext_resource type="Resource" uid="uid://cb5gq2wy4uayy" path="res://assets/core/conductor/shared/volume_metronome.tres" id="6_hfmib"]
 [ext_resource type="PackedScene" uid="uid://bgpkfdo2e2ba2" path="res://assets/views/enemy/enemy_view.tscn" id="7_cju6s"]
+[ext_resource type="Resource" uid="uid://c6j5k4lc7s0uu" path="res://assets/core/conductor/shared/volume_kick.tres" id="7_hn5kw"]
 [ext_resource type="Texture2D" uid="uid://bdnu1fgb628at" path="res://assets/views/battle/city_scape.png" id="7_jbhyw"]
+[ext_resource type="Resource" uid="uid://yi8rbnuhwerh" path="res://assets/core/conductor/shared/volume_bass.tres" id="8_ndljf"]
+[ext_resource type="Resource" uid="uid://bo53sh3frhlqk" path="res://assets/core/conductor/shared/volume_lead.tres" id="9_d2y41"]
 [ext_resource type="PackedScene" uid="uid://b8d6jk4ecb82a" path="res://assets/ui/cross/cross.tscn" id="9_yuouc"]
+[ext_resource type="Resource" uid="uid://dj8gkxdg6kb2" path="res://assets/core/conductor/shared/volume_atmos.tres" id="10_um55b"]
 [ext_resource type="PackedScene" uid="uid://c08084f6b8lym" path="res://assets/ui/countdown/countdown.tscn" id="11_buwy7"]
 [ext_resource type="PackedScene" uid="uid://ee7dgellbfiw" path="res://assets/ui/attacks/attack.tscn" id="11_ym50n"]
 
@@ -20,6 +26,12 @@ script = ExtResource("1_sm54i")
 _current_act = ExtResource("2_llhay")
 _act_turns = ExtResource("3_qkdf3")
 _track_info = ExtResource("4_cju6s")
+pitch = ExtResource("5_yakm4")
+volume_metronome = ExtResource("6_hfmib")
+volume_kick = ExtResource("7_hn5kw")
+volume_bass = ExtResource("8_ndljf")
+volume_lead = ExtResource("9_d2y41")
+volume_atmos = ExtResource("10_um55b")
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1960419885]
 
