@@ -8,6 +8,8 @@
 
 [resource]
 script = ExtResource("1_yfafh")
+is_tutorial = true
+warmup = true
 condition = ExtResource("3_0hali")
 allowed_choreos = ExtResource("1_7ajay")
 background = ExtResource("2_0hali")

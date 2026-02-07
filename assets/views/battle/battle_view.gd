@@ -39,5 +39,5 @@ func next_act() -> void:
 		_act_turns.value = 0
 
 func on_cycle_complete(which : int):
-	if _act_turns and which == 2:
+	if _act_turns and which == 3:
 		_act_turns.value += 1

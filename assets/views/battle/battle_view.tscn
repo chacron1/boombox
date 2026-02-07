@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bgpkfdo2e2ba2" path="res://assets/views/enemy/enemy_view.tscn" id="7_cju6s"]
 [ext_resource type="Texture2D" uid="uid://bdnu1fgb628at" path="res://assets/views/battle/city_scape.png" id="7_jbhyw"]
 [ext_resource type="PackedScene" uid="uid://b8d6jk4ecb82a" path="res://assets/ui/cross/cross.tscn" id="9_yuouc"]
+[ext_resource type="PackedScene" uid="uid://c08084f6b8lym" path="res://assets/ui/countdown/countdown.tscn" id="11_buwy7"]
+[ext_resource type="PackedScene" uid="uid://ee7dgellbfiw" path="res://assets/ui/attacks/attack.tscn" id="11_ym50n"]
 
 [node name="BattleView" type="Node" unique_id=1991368807]
 script = ExtResource("1_sm54i")
@@ -72,6 +74,12 @@ audio_players = {
 position = Vector2(419.00003, 197.00002)
 rotation = -0.17453292
 scale = Vector2(0.9, 0.9)
+
+[node name="Countdown" parent="UI" unique_id=1480208571 instance=ExtResource("11_buwy7")]
+offset_left = -1.0
+offset_right = -1.0
+
+[node name="Attack" parent="UI" unique_id=929673840 instance=ExtResource("11_ym50n")]
 
 [node name="Conductor" parent="." unique_id=435070806 instance=ExtResource("3_llhay")]
 unique_name_in_owner = true
