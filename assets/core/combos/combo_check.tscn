@@ -9,6 +9,8 @@
 [ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="7_5dc7i"]
 [ext_resource type="Resource" uid="uid://vfc4ql7gbvbw" path="res://assets/core/combos/moves/down.tres" id="8_xd626"]
 [ext_resource type="Resource" uid="uid://b6iqvkwnfq442" path="res://assets/core/combos/empty_combo_engine.tres" id="9_qlr1x"]
+[ext_resource type="Resource" uid="uid://dvcplkqkoxhh0" path="res://assets/core/dancer/shared/last_dancer_attack.tres" id="10_khk4b"]
+[ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="11_w7psd"]
 
 [node name="ComboCheck" type="Node" unique_id=855988861]
 script = ExtResource("1_nrihc")
@@ -16,4 +18,6 @@ track_info = ExtResource("2_0y2y2")
 acc_curve = ExtResource("3_khk4b")
 moves = Array[ExtResource("4_w7psd")]([ExtResource("5_gpwer"), ExtResource("6_fmbq4"), ExtResource("7_5dc7i"), ExtResource("8_xd626")])
 combo_engine = ExtResource("9_qlr1x")
+_last_dancer_attack = ExtResource("10_khk4b")
+_current_act = ExtResource("11_w7psd")
 metadata/_custom_type_script = "uid://caxrwhsa021np"

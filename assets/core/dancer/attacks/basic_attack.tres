@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://cw7jhf4bj04c6"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_22jxe"]
+[ext_resource type="Resource" uid="uid://6p7dnt5tt847" path="res://assets/core/enemy/events/take_dmg.tres" id="1_wmyj7"]
+
+[resource]
+script = ExtResource("1_22jxe")
+event = ExtResource("1_wmyj7")
+value = 0.1
+display_text = &"Dancer performed an Attack!"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

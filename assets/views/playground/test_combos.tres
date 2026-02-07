@@ -4,9 +4,10 @@
 [ext_resource type="Script" uid="uid://bodg3madtkbyc" path="res://assets/core/combos/combo_engine.gd" id="2_o5t2j"]
 [ext_resource type="Resource" uid="uid://cpfwtht5gaslx" path="res://assets/core/combos/choreos/basic_attack.tres" id="2_ypanl"]
 [ext_resource type="Resource" uid="uid://bkcixmywradbb" path="res://assets/core/combos/choreos/heal.tres" id="3_mvgv5"]
-[ext_resource type="Resource" uid="uid://bwiddtkw0bhy5" path="res://assets/core/combos/choreos/block.tres" id="4_ul336"]
+[ext_resource type="Resource" uid="uid://bwiddtkw0bhy5" path="res://assets/core/combos/choreos/tempo_up.tres" id="4_mvgv5"]
+[ext_resource type="Resource" uid="uid://nhe7u2v1imuu" path="res://assets/core/combos/choreos/tempo_down.tres" id="5_ul336"]
 
 [resource]
 script = ExtResource("2_o5t2j")
-available_choreos = Array[ExtResource("1_mm1jq")]([ExtResource("2_ypanl"), ExtResource("3_mvgv5"), ExtResource("4_ul336")])
+available_choreos = Array[ExtResource("1_mm1jq")]([ExtResource("2_ypanl"), ExtResource("3_mvgv5"), ExtResource("4_mvgv5"), ExtResource("5_ul336")])
 metadata/_custom_type_script = "uid://bodg3madtkbyc"

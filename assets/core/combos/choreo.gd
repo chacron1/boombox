@@ -4,3 +4,4 @@ extends Resource
 
 @export var name : StringName
 @export var choreo : Array[DanceMove]
+@export var attack : Attack

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://ppcjftlrw43p"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_54xyc"]
+[ext_resource type="Resource" uid="uid://br1kdtjk183b8" path="res://assets/core/dancer/events/heal.tres" id="1_j6p7n"]
+
+[resource]
+script = ExtResource("1_54xyc")
+event = ExtResource("1_j6p7n")
+value = 0.5
+display_text = &"Dancer is healing!"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

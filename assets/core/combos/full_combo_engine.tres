@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ComboEngine" format=3 uid="uid://djkwskxaq3un"]
+
+[ext_resource type="Script" uid="uid://dis6rfuop6vhp" path="res://assets/core/combos/choreo.gd" id="1_nrh7n"]
+[ext_resource type="Script" uid="uid://bodg3madtkbyc" path="res://assets/core/combos/combo_engine.gd" id="2_gcrfx"]
+[ext_resource type="Resource" uid="uid://cpfwtht5gaslx" path="res://assets/core/combos/choreos/basic_attack.tres" id="2_npxr8"]
+[ext_resource type="Resource" uid="uid://bkcixmywradbb" path="res://assets/core/combos/choreos/heal.tres" id="3_acl2l"]
+[ext_resource type="Resource" uid="uid://nhe7u2v1imuu" path="res://assets/core/combos/choreos/tempo_down.tres" id="4_0mdrq"]
+[ext_resource type="Resource" uid="uid://bwiddtkw0bhy5" path="res://assets/core/combos/choreos/tempo_up.tres" id="5_65aq0"]
+
+[resource]
+script = ExtResource("2_gcrfx")
+available_choreos = Array[ExtResource("1_nrh7n")]([ExtResource("2_npxr8"), ExtResource("3_acl2l"), ExtResource("4_0mdrq"), ExtResource("5_65aq0")])
+metadata/_custom_type_script = "uid://bodg3madtkbyc"

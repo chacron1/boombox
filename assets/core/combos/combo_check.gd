@@ -4,11 +4,14 @@ extends Node
 # TODO:
 # - Calculate overall combo
 # - Keep track of choreography accuracy
-# - launch choreography events
 # - Fever mode? 
 
 
-@export var track_info : TrackInfo
+@export var track_info : TrackInfo:
+	set(value):
+		track_info = value
+		track_info.measure_finished.connect(on_measure_change)
+
 @export var acc_curve : Curve
 @export var moves: Array[DanceMove]
 @export var combo_engine : ComboEngine:
@@ -16,6 +19,11 @@ extends Node
 			combo_engine = value
 			combo_engine.compile()
 			_current_cst = combo_engine.cst
+
+@export var _last_dancer_attack : Accessor
+@export var _current_act : Accessor:
+	set(value):
+		value.value_changed.connect(func (val): combo_engine = (val as Act).allowed_choreos)
 
 var _current_cst : ComboEngine.ChoreoSearchTree
 var _last_caught_beat : int = -1
@@ -40,13 +48,12 @@ func _input(event):
 				print("Accuracy:")
 				print(accuracy)
 				if accuracy < 0.0 or _last_caught_beat == beat:
-					miss()
+					_last_dancer_attack.value = "Missed!"
 				elif !_missed_already:
-					print("keep at it!")
 					_last_caught_beat = beat
 					_current_cst = _current_cst.find(m)
+					_last_dancer_attack.value = "Performing an unknown choreography!"
 					if !_current_cst:
-						print("there's no combo like that")
 						miss()
 					elif _current_cst.choreo != null:
 						combo(_current_cst.choreo)
@@ -55,8 +62,12 @@ func _input(event):
 func miss() -> void:
 	_current_cst = combo_engine.cst
 	_missed_already = true
-	print("miss!")
 
 
 func combo(choreo : Choreo) -> void:
-	print(choreo.name)
+	_last_dancer_attack.value = choreo.attack.display_text
+	choreo.attack.attack()
+
+func on_measure_change(which : int) -> void:
+	if which == 2:
+		_last_dancer_attack.value = "Nothing happened!"

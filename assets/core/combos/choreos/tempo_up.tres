@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Choreo" format=3 uid="uid://bwiddtkw0bhy5"]
+
+[ext_resource type="Resource" uid="uid://bud4hh4mp6rxf" path="res://assets/core/dancer/attacks/tempo_up.tres" id="1_0exnn"]
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="1_eg54e"]
+[ext_resource type="Resource" uid="uid://vfc4ql7gbvbw" path="res://assets/core/combos/moves/down.tres" id="2_0exnn"]
+[ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="3_qfvcm"]
+[ext_resource type="Script" uid="uid://dis6rfuop6vhp" path="res://assets/core/combos/choreo.gd" id="4_x4bwh"]
+
+[resource]
+script = ExtResource("4_x4bwh")
+name = &"Tempo Up"
+choreo = Array[ExtResource("1_eg54e")]([ExtResource("2_0exnn"), ExtResource("3_qfvcm"), ExtResource("3_qfvcm"), ExtResource("3_qfvcm")])
+attack = ExtResource("1_0exnn")
+metadata/_custom_type_script = "uid://dis6rfuop6vhp"

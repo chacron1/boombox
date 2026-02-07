@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://d34a7vx01io6d"]
+
+[ext_resource type="Resource" uid="uid://b33h6juon7rfw" path="res://assets/core/dancer/events/take_dmg.tres" id="1_0x27l"]
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_m88pa"]
+
+[resource]
+script = ExtResource("1_m88pa")
+event = ExtResource("1_0x27l")
+value = 0.1
+display_text = &"BB is making unbearable noises"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

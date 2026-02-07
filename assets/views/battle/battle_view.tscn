@@ -20,6 +20,11 @@
 [ext_resource type="Resource" uid="uid://dj8gkxdg6kb2" path="res://assets/core/conductor/shared/volume_atmos.tres" id="10_um55b"]
 [ext_resource type="PackedScene" uid="uid://c08084f6b8lym" path="res://assets/ui/countdown/countdown.tscn" id="11_buwy7"]
 [ext_resource type="PackedScene" uid="uid://ee7dgellbfiw" path="res://assets/ui/attacks/attack.tscn" id="11_ym50n"]
+[ext_resource type="Texture2D" uid="uid://ca1cmo4b43e5l" path="res://resources/bg.svg" id="12_d2y41"]
+[ext_resource type="Material" uid="uid://ce6x5arrkgaq3" path="res://assets/backgrounds/intense/intense.tres" id="13_qouyv"]
+[ext_resource type="Texture2D" uid="uid://b2amj1tijc3vm" path="res://resources/city_01.svg" id="13_um55b"]
+[ext_resource type="Texture2D" uid="uid://ck2fcy4rvjbco" path="res://resources/city_02.svg" id="14_qouyv"]
+[ext_resource type="Texture2D" uid="uid://df64tohmtxojm" path="res://resources/city_03.svg" id="15_kiqmd"]
 
 [node name="BattleView" type="Node" unique_id=1991368807]
 script = ExtResource("1_sm54i")
@@ -36,6 +41,7 @@ volume_atmos = ExtResource("10_um55b")
 [node name="Background" type="CanvasLayer" parent="." unique_id=1960419885]
 
 [node name="ShaderBackground" type="TextureRect" parent="Background" unique_id=1888189056]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -46,11 +52,59 @@ size_flags_vertical = 3
 script = ExtResource("3_dsrnl")
 _current_act = ExtResource("2_llhay")
 
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1351767087]
+visible = false
+texture_filter = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 160.0
+grow_horizontal = 2
+texture = ExtResource("12_d2y41")
+
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=2043084703]
+texture_filter = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 160.0
+grow_horizontal = 2
+texture = ExtResource("13_um55b")
+
+[node name="TextureRect3" type="TextureRect" parent="Background" unique_id=453809193]
+visible = false
+texture_filter = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 160.0
+grow_horizontal = 2
+texture = ExtResource("14_qouyv")
+
+[node name="TextureRect4" type="TextureRect" parent="Background" unique_id=2125131811]
+texture_filter = 2
+material = ExtResource("13_qouyv")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 160.0
+grow_horizontal = 2
+texture = ExtResource("15_kiqmd")
+
 [node name="GameLayer" type="CanvasLayer" parent="." unique_id=1630036316]
 
 [node name="Metronome" parent="GameLayer" unique_id=908407237 instance=ExtResource("1_pi0d8")]
 
 [node name="Sprite2D" type="Sprite2D" parent="GameLayer" unique_id=2061969137]
+visible = false
 position = Vector2(240, 77)
 scale = Vector2(1, 0.8)
 texture = ExtResource("7_jbhyw")

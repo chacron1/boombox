@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://dnhgbfiyq4240"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_85x26"]
+[ext_resource type="Resource" uid="uid://cg02cx7vu8l5r" path="res://assets/core/conductor/events/tempo_down.tres" id="1_ve7a1"]
+
+[resource]
+script = ExtResource("1_85x26")
+event = ExtResource("1_ve7a1")
+value = 0.1
+display_text = &"BB is slowing down"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

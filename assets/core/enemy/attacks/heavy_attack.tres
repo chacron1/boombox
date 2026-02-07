@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://d0auo3w1ywdgn"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_04bjx"]
+[ext_resource type="Resource" uid="uid://b33h6juon7rfw" path="res://assets/core/dancer/events/take_dmg.tres" id="1_7copm"]
+
+[resource]
+script = ExtResource("1_04bjx")
+event = ExtResource("1_7copm")
+value = 0.4
+display_text = &"BB is playing unimaginable noise"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

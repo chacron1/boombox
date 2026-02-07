@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://bud4hh4mp6rxf"]
+
+[ext_resource type="Resource" uid="uid://c3d7hnybvqe5i" path="res://assets/core/conductor/events/tempo_up.tres" id="1_1xpny"]
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_a3tfa"]
+
+[resource]
+script = ExtResource("1_a3tfa")
+event = ExtResource("1_1xpny")
+value = 0.1
+display_text = &"Dancer is moving faster!"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

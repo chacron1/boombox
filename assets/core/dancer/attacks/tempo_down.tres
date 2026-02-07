@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://b7nx1jwn6eui6"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_ilnbw"]
+[ext_resource type="Resource" uid="uid://cg02cx7vu8l5r" path="res://assets/core/conductor/events/tempo_down.tres" id="1_lulak"]
+
+[resource]
+script = ExtResource("1_ilnbw")
+event = ExtResource("1_lulak")
+value = 0.1
+display_text = &"Dancer slows down!"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

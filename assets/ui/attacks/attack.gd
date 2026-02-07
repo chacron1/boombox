@@ -37,15 +37,18 @@ func on_measure_finished(which : int) -> void:
 			_:
 				no_attack()
 
+
 func dancer_attack() -> void:
 	rect.material.set_shader_parameter("stripe_color", dancer_wave_color)
 	animation_player.play("attack", -1, 0.0)
 	_play = true
 
+
 func enemy_attack() -> void:
 	rect.material.set_shader_parameter("stripe_color", enemy_wave_color)
 	animation_player.play("enemy_attack", -1, 0.0)
 	_play = true
+
 
 func no_attack() -> void:
 	_play = false

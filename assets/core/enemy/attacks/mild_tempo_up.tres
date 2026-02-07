@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://b6w01ln42l2f1"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_63wmc"]
+[ext_resource type="Resource" uid="uid://c3d7hnybvqe5i" path="res://assets/core/conductor/events/tempo_up.tres" id="1_cnygk"]
+
+[resource]
+script = ExtResource("1_63wmc")
+event = ExtResource("1_cnygk")
+value = 0.1
+display_text = &"BB is uping the tempo"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

@@ -5,13 +5,18 @@
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="3_qd0ns"]
 [ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="4_vgw5w"]
 [ext_resource type="Resource" uid="uid://b4f5pruf8882v" path="res://assets/core/combos/moves/left.tres" id="5_g1efl"]
+[ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="5_up31e"]
 [ext_resource type="Resource" uid="uid://btgk32mds3wpi" path="res://assets/core/combos/moves/up.tres" id="6_sxyd5"]
 [ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="7_a4v4b"]
 [ext_resource type="Resource" uid="uid://vfc4ql7gbvbw" path="res://assets/core/combos/moves/down.tres" id="8_yxl6b"]
 [ext_resource type="AudioStream" uid="uid://dunvyd0lgo5g5" path="res://assets/core/dancer/audio/yah.wav" id="9_4frhy"]
+[ext_resource type="Resource" uid="uid://d0vut8cfwk0le" path="res://assets/core/dancer/shared/dancer_hp.tres" id="10_00bhq"]
 [ext_resource type="AudioStream" uid="uid://com406bhjo032" path="res://assets/core/dancer/audio/wub.wav" id="10_t0la1"]
 [ext_resource type="AudioStream" uid="uid://djx0m21gx2060" path="res://assets/core/dancer/audio/dibi.wav" id="11_oqokd"]
+[ext_resource type="Resource" uid="uid://br1kdtjk183b8" path="res://assets/core/dancer/events/heal.tres" id="11_to5jm"]
+[ext_resource type="Resource" uid="uid://b33h6juon7rfw" path="res://assets/core/dancer/events/take_dmg.tres" id="12_50gkw"]
 [ext_resource type="AudioStream" uid="uid://cy8dqhaxwmx3h" path="res://assets/core/dancer/audio/bom.wav" id="12_uj8ba"]
+[ext_resource type="Resource" uid="uid://cb3v4jllfcro0" path="res://assets/core/dancer/events/dead.tres" id="13_ax0ta"]
 [ext_resource type="Texture2D" uid="uid://dl0ym5ah2paa" path="res://assets/core/dancer/sprites/move_effects.png" id="13_t0la1"]
 
 [sub_resource type="Animation" id="Animation_t0la1"]
@@ -351,7 +356,7 @@ frame = 4
 script = ExtResource("1_nd3pi")
 anim_curve = ExtResource("3_qd0ns")
 track_info = ExtResource("4_vgw5w")
-moves = Array[Object]([ExtResource("5_g1efl"), ExtResource("6_sxyd5"), ExtResource("7_a4v4b"), ExtResource("8_yxl6b")])
+moves = Array[ExtResource("5_up31e")]([ExtResource("5_g1efl"), ExtResource("6_sxyd5"), ExtResource("7_a4v4b"), ExtResource("8_yxl6b")])
 audio_players = {
 &"Bom": NodePath("BomPlayer"),
 &"Dibi": NodePath("DibiPlayer"),
@@ -359,6 +364,10 @@ audio_players = {
 &"Yah": NodePath("YahPlayer")
 }
 animation_player = NodePath("AnimationPlayer")
+hp = ExtResource("10_00bhq")
+heal = ExtResource("11_to5jm")
+take_dmg = ExtResource("12_50gkw")
+dead = ExtResource("13_ax0ta")
 metadata/_custom_type_script = "uid://b0wq8vw2ygl5m"
 
 [node name="YahPlayer" type="AudioStreamPlayer" parent="." unique_id=395341832]

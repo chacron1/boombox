@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b44owovll5qjd"]
+
+[ext_resource type="Script" uid="uid://dc8fxc1wtg3va" path="res://assets/core/enemy/enemy.gd" id="1_48x8m"]
+[ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="2_feb15"]
+[ext_resource type="Resource" uid="uid://ci1ovk3g3nhpy" path="res://assets/core/enemy/shared/enemy_hp.tres" id="2_o7gta"]
+[ext_resource type="Resource" uid="uid://cb8t4a0uh3sni" path="res://assets/core/conductor/track_info.tres" id="3_076k2"]
+[ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="4_v6lqq"]
+[ext_resource type="Resource" uid="uid://bswavktmap7ep" path="res://assets/core/enemy/shared/last_enemy_attack.tres" id="6_jam45"]
+[ext_resource type="Resource" uid="uid://cnv6atiou7283" path="res://assets/core/enemy/events/heal.tres" id="7_m3vl0"]
+[ext_resource type="Resource" uid="uid://6p7dnt5tt847" path="res://assets/core/enemy/events/take_dmg.tres" id="8_5kdn2"]
+[ext_resource type="Resource" uid="uid://bxonhsklkt2d2" path="res://assets/core/enemy/events/do_nothing.tres" id="9_2firr"]
+[ext_resource type="Resource" uid="uid://b4b2b6q58y12d" path="res://assets/core/enemy/events/dead.tres" id="10_yfpew"]
+
+[node name="BaseEnemy" type="Node3D" unique_id=1396356393]
+script = ExtResource("1_48x8m")
+anim_curve = ExtResource("2_feb15")
+track_info = ExtResource("3_076k2")
+_current_act = ExtResource("4_v6lqq")
+hp = ExtResource("2_o7gta")
+last_enemy_attack = ExtResource("6_jam45")
+heal = ExtResource("7_m3vl0")
+take_dmg = ExtResource("8_5kdn2")
+do_nothing = ExtResource("9_2firr")
+dead = ExtResource("10_yfpew")
+metadata/_custom_type_script = "uid://dc8fxc1wtg3va"

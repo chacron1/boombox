@@ -9,6 +9,20 @@ extends Sprite2D
 @export var audio_players : Dictionary[StringName, AudioStreamPlayer]
 @export var animation_player : AnimationPlayer
 
+@export_group("Public variables")
+@export var hp : Accessor
+
+@export_group("Events")
+@export var heal : Accessor:
+	set(value):
+		value.value_changed.connect(on_heal)
+
+@export var take_dmg : Accessor:
+	set(value):
+		value.value_changed.connect(on_damage)
+
+@export var dead : Accessor
+
 func _process(_delta) -> void:
 	if track_info.is_playing:
 		var x_value = anim_curve.sample(track_info.beat_progress) * anim_strength
@@ -22,9 +36,23 @@ func _process(_delta) -> void:
 		frame = 0
 
 func _input(event):
-	# TODO : Check if it's your 'TURN'
 	for m in moves:
 		if event.is_action_pressed(m.input_action):
 			frame = m.anim_index
 			audio_players[m.name].play()
 			animation_player.play(m.name)
+
+
+func on_heal(value : Variant) -> void:
+	var new = hp.value + value
+	if new >= 1.0:
+		new = 1.0
+	hp.value = new
+
+
+func on_damage(value : Variant) -> void:
+	var new = hp.value - value
+	if new <= 0.0:
+		new = 0.0
+	hp.value = new
+	dead.value_changed.emit()

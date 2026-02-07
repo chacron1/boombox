@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://buh27d66gru77"]
+
+[ext_resource type="Resource" uid="uid://cg02cx7vu8l5r" path="res://assets/core/conductor/events/tempo_down.tres" id="1_16n8k"]
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_66b6a"]
+
+[resource]
+script = ExtResource("1_66b6a")
+event = ExtResource("1_16n8k")
+value = 0.4
+display_text = &"BB decided to take it slow"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

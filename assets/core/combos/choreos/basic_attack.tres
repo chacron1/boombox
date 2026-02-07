@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="Choreo" format=3 uid="uid://cpfwtht5gaslx"]
 
 [ext_resource type="Script" uid="uid://cupkt0mxce8gi" path="res://assets/core/combos/dance_move.gd" id="1_h74xk"]
+[ext_resource type="Resource" uid="uid://cw7jhf4bj04c6" path="res://assets/core/dancer/attacks/basic_attack.tres" id="1_qh2hr"]
 [ext_resource type="Resource" uid="uid://b4f5pruf8882v" path="res://assets/core/combos/moves/left.tres" id="2_b52am"]
 [ext_resource type="Script" uid="uid://dis6rfuop6vhp" path="res://assets/core/combos/choreo.gd" id="2_gvv2y"]
 [ext_resource type="Resource" uid="uid://0m4qdv6yr3e7" path="res://assets/core/combos/moves/right.tres" id="3_qh2hr"]
@@ -9,4 +10,5 @@
 script = ExtResource("2_gvv2y")
 name = &"Attack"
 choreo = Array[ExtResource("1_h74xk")]([ExtResource("2_b52am"), ExtResource("3_qh2hr"), ExtResource("3_qh2hr"), ExtResource("2_b52am")])
+attack = ExtResource("1_qh2hr")
 metadata/_custom_type_script = "uid://dis6rfuop6vhp"

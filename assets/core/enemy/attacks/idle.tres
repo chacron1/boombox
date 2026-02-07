@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://837nt861u7sf"]
+
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="1_ftjnu"]
+[ext_resource type="Resource" uid="uid://bxonhsklkt2d2" path="res://assets/core/enemy/events/do_nothing.tres" id="1_x0iyf"]
+
+[resource]
+script = ExtResource("1_ftjnu")
+event = ExtResource("1_x0iyf")
+value = null
+display_text = &"BB is playing harmless music"
+metadata/_custom_type_script = "uid://bxbnqr3udqy65"

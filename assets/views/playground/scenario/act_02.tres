@@ -5,6 +5,9 @@
 [ext_resource type="Resource" uid="uid://duk10ch3pml4o" path="res://assets/backgrounds/intense.tres" id="2_b73y6"]
 [ext_resource type="Resource" uid="uid://dcr7httmu2wmk" path="res://assets/views/playground/scenario/conditions/no_finish.tres" id="3_blox7"]
 [ext_resource type="Resource" uid="uid://degkodfoljg1g" path="res://assets/core/metronome/palette/default_palette.tres" id="4_b73y6"]
+[ext_resource type="Script" uid="uid://bxbnqr3udqy65" path="res://assets/core/attack/attack.gd" id="4_hed6l"]
+[ext_resource type="Resource" uid="uid://d34a7vx01io6d" path="res://assets/core/enemy/attacks/weak_attack.tres" id="5_ktniu"]
+[ext_resource type="Resource" uid="uid://837nt861u7sf" path="res://assets/core/enemy/attacks/idle.tres" id="6_gosk6"]
 
 [resource]
 script = ExtResource("1_kt1sx")
@@ -12,6 +15,7 @@ condition = ExtResource("3_blox7")
 allowed_choreos = ExtResource("1_uib2y")
 background = ExtResource("2_b73y6")
 metronome_palette = ExtResource("4_b73y6")
+enemy_attacks = Array[ExtResource("4_hed6l")]([ExtResource("5_ktniu"), ExtResource("6_gosk6")])
 volume_metronome = 1.0
 volume_kick = 1.0
 volume_bass = 1.0

@@ -6,6 +6,9 @@
 [ext_resource type="Resource" uid="uid://4xvoky2bc6qa" path="res://assets/views/battle/shared/act.tres" id="3_a2hfi"]
 [ext_resource type="LabelSettings" uid="uid://cdjg6inv7b5jy" path="res://assets/ui/attacks/attack_label.tres" id="3_mc41l"]
 [ext_resource type="Curve" uid="uid://x4gcnwpc02ab" path="res://assets/utils/curves/bounce_curve.tres" id="4_3chff"]
+[ext_resource type="Script" uid="uid://bnryhii42nwkr" path="res://assets/ui/attacks/label.gd" id="7_jonxs"]
+[ext_resource type="Resource" uid="uid://bswavktmap7ep" path="res://assets/core/enemy/shared/last_enemy_attack.tres" id="8_oyhih"]
+[ext_resource type="Resource" uid="uid://dvcplkqkoxhh0" path="res://assets/core/dancer/shared/last_dancer_attack.tres" id="9_yes4j"]
 
 [sub_resource type="Animation" id="Animation_r0t5x"]
 length = 0.001
@@ -60,7 +63,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label:position")
+tracks/4/path = NodePath("EnemyLabel:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -72,7 +75,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label:scale")
+tracks/5/path = NodePath("EnemyLabel:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -84,7 +87,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label:visible")
+tracks/6/path = NodePath("EnemyLabel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -147,7 +150,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label:position")
+tracks/4/path = NodePath("DancerLabel:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -159,7 +162,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label:scale")
+tracks/5/path = NodePath("DancerLabel:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -171,7 +174,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label:visible")
+tracks/6/path = NodePath("DancerLabel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -234,7 +237,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Label:position")
+tracks/4/path = NodePath("EnemyLabel:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -246,7 +249,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Label:scale")
+tracks/5/path = NodePath("EnemyLabel:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -258,7 +261,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Label:visible")
+tracks/6/path = NodePath("EnemyLabel:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -298,13 +301,13 @@ texture_filter = 1
 material = ExtResource("1_r0t5x")
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 39.999634
+offset_bottom = 39.99962
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=998534624]
 libraries/ = SubResource("AnimationLibrary_r0t5x")
 
-[node name="Label" type="Label" parent="." unique_id=1671226847]
+[node name="EnemyLabel" type="Label" parent="." unique_id=1671226847]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -317,3 +320,22 @@ text = "PLACEHOLDER MESSAGE"
 label_settings = ExtResource("3_mc41l")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("7_jonxs")
+attack = ExtResource("8_oyhih")
+
+[node name="DancerLabel" type="Label" parent="." unique_id=206287763]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.00012207031
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1)
+text = "Nothing happened!"
+label_settings = ExtResource("3_mc41l")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_jonxs")
+attack = ExtResource("9_yes4j")

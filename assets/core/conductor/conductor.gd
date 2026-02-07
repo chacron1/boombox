@@ -16,23 +16,40 @@ extends Node
 		if player:
 			player.stream_paused = value
 
+@export var pitch_max : float
+@export var pitch_min : float
+
+@export_group("Song parameter events")
+@export var pitch_up : Accessor:
+	set(value):
+		value.value_changed.connect(on_pitch_up)
+
+@export var pitch_down : Accessor:
+	set(value):
+		value.value_changed.connect(on_pitch_down)
+
 @export_group("Song parameter accessors")
 @export var pitch : Accessor:
 	set(value):
 		value.value_changed.connect(pitch_changed)
+
 @export_subgroup("Song volume accessors")
 @export var volume_metronome: Accessor:
 	set(value):
 		value.value_changed.connect(volume_metronome_changed)
+
 @export var volume_kick: Accessor:
 	set(value):
 		value.value_changed.connect(volume_kick_changed)
+
 @export var volume_bass: Accessor:
 	set(value):
 		value.value_changed.connect(volume_bass_changed)
+
 @export var volume_lead: Accessor:
 	set(value):
 		value.value_changed.connect(volume_lead_changed)
+
 @export var volume_atmos: Accessor:
 	set(value):
 		value.value_changed.connect(volume_atmos_changed)
@@ -201,6 +218,20 @@ func get_current_beat_raw() -> float:
 func get_beat_duration() -> float:
 	return 60 / bpm
 
+
+func on_pitch_down(value : Variant) -> void:
+	var new = player.pitch_scale - value as float
+	if new < pitch_min:
+		new = pitch_min
+	player.pitch_scale = new
+
+func on_pitch_up(value : Variant) -> void:
+	var new = player.pitch_scale + value as float
+	if new > pitch_max:
+		new = pitch_max
+	player.pitch_scale = new
+	print("PITCH UP")
+	print(player.pitch_scale)
 
 func pitch_changed(value : Variant) -> void:
 	player.pitch_scale = value as float

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Accessor" format=3 uid="uid://cg02cx7vu8l5r"]
+
+[ext_resource type="Script" uid="uid://cp2lmw2tb8ll6" path="res://assets/utils/accessors/accessor.gd" id="1_p5vpg"]
+
+[resource]
+script = ExtResource("1_p5vpg")
+value = 0.0
+metadata/_custom_type_script = "uid://cp2lmw2tb8ll6"

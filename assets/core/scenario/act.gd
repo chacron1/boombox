@@ -8,6 +8,7 @@ extends Resource
 @export var allowed_choreos : ComboEngine
 @export var background : Background
 @export var metronome_palette : WavePalette
+@export var enemy_attacks : Array[Attack]
 
 
 @export_group("Track volume")
@@ -18,5 +19,4 @@ extends Resource
 @export_range(0.0, 1.0) var volume_atmos : float
 
 
-# TODO : allowed_enemy_attacks : Array[EnemyAttack]
 # TODO : tutorial display message text (if tutorial scene)
